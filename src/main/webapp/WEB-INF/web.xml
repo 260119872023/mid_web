@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    
+    <welcome-file-list>
+        <welcome-file>/Login.html</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404_Error.jsp</location>
+    </error-page>
+<!--    <error-page>-->
+<!--        <error-code>500</error-code>-->
+<!--        <location>/500_Erro.jsp</location>-->
+<!--    </error-page>-->
+    <filter>
+        <filter-name>filterServelet</filter-name>
+        <filter-class>Controller.filterServelet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filterServelet</filter-name>
+        <url-pattern>/getTeacherCourse.jsp</url-pattern>
+        <url-pattern>/AdminPortal.jsp</url-pattern>
+        <url-pattern>/indexsss.html</url-pattern>
+        <url-pattern>/TeacherForm.jsp</url-pattern>
+        <url-pattern>/studentReg.jsp</url-pattern>
+        <url-pattern>/Registration.jsp</url-pattern>
+        <url-pattern>/lectureEdit.jsp</url-pattern>
+        <url-pattern>/teacherFormall.jsp</url-pattern>
+        <url-pattern>/academicUnit.jsp</url-pattern>
+        <url-pattern>/CourseForm.jsp</url-pattern>
+    </filter-mapping>
+</web-app>
